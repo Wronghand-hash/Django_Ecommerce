@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import *
+from rest_framework.decorators import api_view
+from django.http import HttpRequest
+
 
 
 def frontpage(request):
