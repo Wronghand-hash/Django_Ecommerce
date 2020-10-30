@@ -5,6 +5,14 @@ import json
 from .models import *
 from rest_framework.decorators import api_view
 from django.http import HttpRequest
+from rest_framework import viewsets
+from .serializers import ProductSerializer
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
 
 
 
@@ -114,4 +122,4 @@ def updateItem(request):
     if orderItem.quantity <= 0:
         orderItem.delete()
 
-    return JsonResponse('item added to cart', safe=False)
+    return JsonResponse('item added to cart', safe=False
