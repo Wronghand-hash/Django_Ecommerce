@@ -2,6 +2,14 @@ from django.shortcuts import render, get_object_or_404
 from .models import *
 from rest_framework.decorators import api_view
 from django.http import HttpRequest
+from rest_framework import viewsets
+from .serializers import ProductSerializer
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
 
 
 
