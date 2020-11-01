@@ -2,7 +2,24 @@
   <div>
     <div v-if="products && products.length">
       <div v-for="product of products" v-bind:key="product.title">
-        <h1>{{ product.title }}</h1>
+        <v-container class="d-flex justify-start mb-6" fluid>
+     <v-layout row wrap>
+        <v-card class="" max-width="374">
+          <v-img height="250" src="" >
+           </v-img>
+          <v-card-title>
+            {{ product.title }}
+          </v-card-title>
+          <v-card-subtitle>
+            {{ product.price }}
+          </v-card-subtitle>
+          <v-card-text>
+            {{ product.description }}
+          </v-card-text>
+        </v-card>
+    </v-layout>
+    </v-container>
+        <!-- <h1>{{ product.title }}</h1> -->
       </div>
     </div>
   </div>
@@ -18,11 +35,11 @@ export default {
       products: []
     };
   },
-    created() {
-      axios.get("http://127.0.0.1:8000/api/store/").then(response => {
-        this.products = response.data;
-      });
-    },
+  created() {
+    axios.get("http://127.0.0.1:8000/api/store/").then(response => {
+      this.products = response.data;
+    });
+  }
 };
 </script>
 
