@@ -2,8 +2,8 @@
   <div>
     <div v-if="products && products.length">
       <div v-for="product of products" v-bind:key="product.title">
-        <v-container class="d-flex justify-start mb-6" fluid>
-     <v-layout row wrap>
+        <v-container  class="d-flex justify-start mb-6">
+     <v-layout column wrap >
         <v-card class="" max-width="374">
           <v-img height="250" src="" >
            </v-img>
