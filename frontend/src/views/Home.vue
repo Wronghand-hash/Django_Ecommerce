@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <div>
+      <v-img max-height=900 src="@/assets/images/john-price-_mSlcGbdxS8-unsplash.jpg"></v-img>
+      <v-img class="van-pic" absolute right max-height=700 max-width=400 src="@/assets/images/tyler-nix-6mze64HRU2Q-unsplash.jpg" ></v-img>
+    </div>
+    <div class="right-pic">
+    </div>
     <div>
       <productlist></productlist>
     </div>
@@ -18,3 +23,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .van-pic {
+    position: absolute;
+  }
+</style>
