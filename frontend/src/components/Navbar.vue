@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-toolbar flat app color="#044F28">
+    <v-toolbar flat app color="lime lighten-2">
       <v-app-bar-nav-icon
         app
         class="white--text"
@@ -42,15 +42,27 @@
             ></v-img>
           </v-list-item-avatar>
         </v-list-item>
+        <v-list-item v-for="category in categories" :key="category.title">
+          <v-list-item-content>
+            <v-btn>
+              <span>
+                {{ category.title }}
+              </span>
+            </v-btn>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </nav>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
+      categoris: [],
       drawer: false,
       links: [
         { text: "Dashboard", route: "/" },
@@ -58,6 +70,11 @@ export default {
         { text: "Team", route: "/team" }
       ]
     };
+  },
+  created() {
+    axios.get("http://127.0.0.1:8000/api/category/").then(response => {
+      this.categories = response.data;
+    });
   }
 };
 </script>

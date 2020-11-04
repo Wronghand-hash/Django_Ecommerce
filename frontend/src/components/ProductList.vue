@@ -1,27 +1,30 @@
 <template>
   <div>
-    <div v-if="products && products.length">
-      <div v-for="product of products" v-bind:key="product.title">
-        <v-container  class="d-flex justify-start mb-6">
-     <v-layout column wrap >
-        <v-card class="" max-width="374">
-          <v-img height="250" src="" >
-           </v-img>
-          <v-card-title>
-            {{ product.title }}
-          </v-card-title>
-          <v-card-subtitle>
-            {{ product.price }}
-          </v-card-subtitle>
-          <v-card-text>
-            {{ product.description }}
-          </v-card-text>
+    <v-container>
+      <div v-if="products && products.length">
+        <v-card
+          max-width="374"
+          v-for="product of products"
+          v-bind:key="product.title"
+        >
+          <v-row wrap>
+            <v-col xs12 md6>
+              <v-img height="250" src=""> </v-img>
+              <v-card-title>
+                {{ product.title }}
+              </v-card-title>
+              <v-card-subtitle>
+                {{ product.price }}
+              </v-card-subtitle>
+              <v-card-text>
+                {{ product.description }}
+              </v-card-text>
+            </v-col>
+          </v-row>
         </v-card>
-    </v-layout>
-    </v-container>
-        <!-- <h1>{{ product.title }}</h1> -->
       </div>
-    </div>
+    </v-container>
+    <!-- <h1>{{ product.title }}</h1> -->
   </div>
 </template>
 
