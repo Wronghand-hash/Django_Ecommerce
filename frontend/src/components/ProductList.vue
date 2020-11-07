@@ -5,8 +5,8 @@
         <v-container  class="d-flex justify-start mb-6">
      <v-layout column wrap >
         <v-card class="" max-width="374">
-          <v-img height="250" src="" >
-           </v-img>
+          <v-img :src="product.image" height="250">
+          </v-img>
           <v-card-title>
             {{ product.title }}
           </v-card-title>
