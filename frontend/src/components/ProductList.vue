@@ -13,7 +13,7 @@
           </v-card-text>
           <v-card-actions>
             <v-btn flat>
-              <v-icon left>mdi-add-shopping-cart</v-icon>
+              <v-icon left>mdi-cart</v-icon>
               <span>add to cart</span>
             </v-btn>
           </v-card-actions>
