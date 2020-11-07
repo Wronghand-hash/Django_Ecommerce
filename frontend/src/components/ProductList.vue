@@ -1,31 +1,27 @@
 <template>
-  <div>
-    <v-container>
-      <div v-if="products && products.length">
-        <v-card
-          max-width="374"
-          v-for="product of products"
-          v-bind:key="product.title"
-        >
-          <v-row wrap>
-            <v-col xs12 md6>
-              <v-img height="250" src=""> </v-img>
-              <v-card-title>
-                {{ product.title }}
-              </v-card-title>
-              <v-card-subtitle>
-                {{ product.price }}
-              </v-card-subtitle>
-              <v-card-text>
-                {{ product.description }}
-              </v-card-text>
-            </v-col>
-          </v-row>
+  <v-container class="my-5">
+
+    <v-layout row wrap>
+      <v-flex xs12 sm6 md4 lg3 v-for="product in products" :key="product.title">
+        <v-card class="text-xs-center ma-3">
+          <v-responsive>
+            <v-img height="250" :src="product.image"></v-img>
+          </v-responsive>
+          <v-card-text>
+            <div class="subheading">{{product.title}}</div>
+            <div>{{ product.price }}</div>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn flat>
+              <v-icon left>mdi-add-shopping-cart</v-icon>
+              <span>add to cart</span>
+            </v-btn>
+          </v-card-actions>
         </v-card>
-      </div>
-    </v-container>
-    <!-- <h1>{{ product.title }}</h1> -->
-  </div>
+      </v-flex>
+    </v-layout>
+
+  </v-container>
 </template>
 
 <script>
