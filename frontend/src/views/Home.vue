@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div>
-      <v-img max-height=900 src="@/assets/images/jean-estrella-_XOpGfUkjhs-unsplash.jpg"></v-img>
+      <v-img class="home-background" max-height=900 src="@/assets/images/alex-shutin-kKvQJ6rK6S4-unsplash.jpg"></v-img>
       <!-- <v-img class="van-pic" absolute right max-height=700 max-width=400 src="@/assets/images/tyler-nix-6mze64HRU2Q-unsplash.jpg" ></v-img> -->
     </div>
     <div class="right-pic">
@@ -25,7 +25,9 @@ export default {
 </script>
 
 <style scoped>
-  .van-pic {
-    position: absolute;
+  
+  .home-background {
+    filter: blur(2px);
+  -webkit-filter: blur(2px);
   }
 </style>

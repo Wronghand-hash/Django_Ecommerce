@@ -1,18 +1,18 @@
 <template>
   <nav>
-    <v-toolbar flat app color="lime lighten-2">
+    <v-toolbar flat app color="" class="navbar">
       <v-app-bar-nav-icon
         app
-        class="white--text"
+        class="black--text"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title class=" white--text text-uppercase">
+      <v-toolbar-title class=" black--text text-uppercase">
         <span>Acupulco </span>
         <span class="font-weight-light">Design</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn dark flat color="teal accent-3">
-        <span>
+        <span large>
           Login
         </span>
         <v-icon right>mdi-login-variant</v-icon>
@@ -78,3 +78,13 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  @import url("https://fonts.googleapis.com/css2?family=Engagement&display=swap");
+
+
+
+.class {
+  /* font-size  */
+}
+</style>
