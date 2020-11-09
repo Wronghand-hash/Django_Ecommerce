@@ -31,8 +31,12 @@ class ProductList(generics.ListCreateAPIView):
 
     def post(self, request, *args , **kwargs):
         return self.create(request, *args , **kwargs)
+
+class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
       
-class CategoryViewSet(viewsets.ModelViewSet):
+class CategoryViewSet(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
