@@ -1,17 +1,27 @@
 <template>
   <nav>
-    <v-toolbar flat app color="" class="navbar">
+    <v-toolbar fixed app color="#00AE3A" class="navbar">
       <v-app-bar-nav-icon
         app
         class="black--text"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title class=" black--text text-uppercase">
+      <!-- <v-toolbar-title class=" black--text text-uppercase">
         <span>Acupulco </span>
         <span class="font-weight-light">Design</span>
-      </v-toolbar-title>
+      </v-toolbar-title> -->
       <v-spacer></v-spacer>
-      <v-btn dark flat color="teal accent-3">
+      <v-menu transition="slide-y-transition" bottom open-on-hover >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn  large v-bind="attrs" v-on="on" color="#ff9f1c" class="mx-2">Explore</v-btn>
+        </template>
+        <v-list>
+          <v-list-item v-for="category in categories" :key="category.title">
+            <v-list-item-title>{{ category.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <v-btn rounded dark large color="#011627">
         <span large>
           Login
         </span>
@@ -80,11 +90,10 @@ export default {
 </script>
 
 <style scoped>
-  @import url("https://fonts.googleapis.com/css2?family=Engagement&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Engagement&display=swap");
 
 
-
-.class {
-  /* font-size  */
+.navbar {
+  font-size: 4px;
 }
 </style>
