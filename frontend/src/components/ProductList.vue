@@ -3,7 +3,7 @@
   <v-container class="my-5">
 
     <v-layout row wrap>
-      <v-flex xs12 sm6 md4 lg3 v-for="product in products" :key="product.title">
+      <v-flex xs12 sm6 md4 lg3 v-for="product in APIData" :key="product.title">
         <v-hover v-slot="{ hover }">
         <v-card class="text-xs-center ma-3">
           <v-responsive>
@@ -37,18 +37,21 @@
 
 <script>
 import axios from "axios";
+import { mapState } from 'vuex'
 
 export default {
   name: "productlist",
-  data() {
-    return {
-      products: []
-    };
-  },
+
+  computed: mapState(['APIData']),
+  
   created() {
-    axios.get("http://127.0.0.1:8000/api/store/").then(response => {
-      this.products = response.data;
-    });
+    axios.get("http://127.0.0.1:8000/api/store/" , {headers: {Authorization: `Bearer ${this.$store.state.accessToken}`} })
+    .then(response => {
+      this.$store.state.APIData = response.data;
+    })
+    .catch(err => {
+      console.log(err);
+    })
   }
 };
 </script>
