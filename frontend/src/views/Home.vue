@@ -7,6 +7,7 @@
     <div class="right-pic">
     </div>
     <div>
+      <MiniCart></MiniCart>
       <productlist></productlist>
     </div>
     <Footer></Footer>
@@ -17,12 +18,14 @@
 // @ is an alias to /src
 import productlist from "@/components/ProductList.vue";
 import Footer from "@/components/Footer.vue"
+import MiniCart from "../components/MiniCart.vue"
 
 export default {
   name: "Home",
   components: {
     productlist,
-    Footer
+    Footer,
+    MiniCart
   }
 };
 </script>

@@ -18,9 +18,9 @@ const routes = [
     path: "/productslist",
     name: "productlist",
     component: productlist,
-    meta: {
-      requiresLogin: true
-    }
+    // meta: {
+    //   requiresLogin: true
+    // }
   },
   {
     path: "/login",

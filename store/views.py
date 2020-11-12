@@ -21,7 +21,6 @@ from rest_framework import generics
 
 #class based api using 
 class ProductList(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticated,)
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -35,9 +34,10 @@ class ProductList(generics.ListCreateAPIView):
         return self.create(request, *args , **kwargs)
 
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthenticated,)
+
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    
       
 class CategoryViewSet(generics.ListCreateAPIView):
     queryset = Category.objects.all()
