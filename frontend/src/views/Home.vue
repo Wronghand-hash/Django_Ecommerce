@@ -1,36 +1,42 @@
 <template>
-  <div class="home" color="#DFDFDF">
-    <div>
-      <v-img class="home-background" max-height=900 src="@/assets/images/tabitha-turner--_bSa4Sn1Bs-unsplash.jpg"></v-img>
-      <!-- <v-img class="van-pic" absolute right max-height=700 max-width=400 src="@/assets/images/tyler-nix-6mze64HRU2Q-unsplash.jpg" ></v-img> -->
-    </div>
-    <div class="right-pic">
-    </div>
-    <div>
-      <productlist></productlist>
-    </div>
-    <Footer></Footer>
+  <div class="home pa-0" color="#DFDFDF">
+    <Navbar />
+    <MainPage />
+    <ProductList />
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import productlist from "@/components/ProductList.vue";
-import Footer from "@/components/Footer.vue"
+import Navbar from "@/components/Navbar.vue";
+import MainPage from "@/components/MainPage.vue"
+import ProductList from "@/components/ProductList.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "Home",
   components: {
-    productlist,
+    Navbar,
+    MainPage,
+    ProductList,
     Footer
   }
 };
 </script>
 
 <style scoped>
-  
-  /* .home-background {
-    filter: blur(1px);
-  -webkit-filter: blur(1px);
-  } */
+
+
+.p-home {
+  position: absolute;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  color: #ffffff;
+}
+
+.home-background {
+  height: 100%;
+}
 </style>

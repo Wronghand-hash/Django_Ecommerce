@@ -1,7 +1,7 @@
 <template>
   <v-app class="grey lighten-4">
-    <Navbar />
-    <v-main>
+
+    <v-main >
       <!-- <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link> -->
       <router-view />
@@ -11,13 +11,13 @@
 
 <script>
 // import HelloWorld from "./components/HelloWorld";
-import Navbar from "./components/Navbar";
+
 
 export default {
   name: "App",
 
   components: {
-    Navbar
+   
   },
 
   data: () => ({

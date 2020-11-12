@@ -1,9 +1,18 @@
 <template>
-  <nav>
-    <v-toolbar fixed app color="#00AE3A" class="navbar">
+  <nav class="pa-0 ma-0">
+    <v-toolbar
+      justify-center
+      color="transparent"
+      width="100%"
+      absolute
+      shrink-on-scroll
+      fade-img-on-scroll
+      scroll-target="#scrolling-techniques-5"
+      scroll-threshold="500"
+    >
       <v-app-bar-nav-icon
         app
-        class="black--text"
+        class="white--text"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
       <!-- <v-toolbar-title class=" black--text text-uppercase">
@@ -11,9 +20,19 @@
         <span class="font-weight-light">Design</span>
       </v-toolbar-title> -->
       <v-spacer></v-spacer>
-      <v-menu transition="slide-y-transition" bottom open-on-hover >
+      <v-menu transition="slide-y-transition" bottom open-on-hover>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn  large v-bind="attrs" v-on="on" color="#ff9f1c" class="mx-2">Explore</v-btn>
+          <v-btn
+            x-large
+            v-bind="attrs"
+            v-on="on"
+            color="transparent"
+            class="mx-2"
+          >
+            <span class="white--text">
+              Explore
+            </span>
+          </v-btn>
         </template>
         <v-list>
           <v-list-item v-for="category in categories" :key="category.title">
@@ -21,13 +40,17 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-btn rounded dark large color="#011627">
-        <span large>
-          Login
-        </span>
-        <v-icon right>mdi-login-variant</v-icon>
+      <v-btn dark large color="transparent">
+        <v-icon large right>mdi-login-variant</v-icon>
       </v-btn>
     </v-toolbar>
+    <v-sheet
+      id="scrolling-techniques-5"
+      class="overflow-y-auto"
+      max-height="600"
+    >
+    </v-sheet>
+
     <v-navigation-drawer
       d-flex-column
       v-model="drawer"
@@ -91,7 +114,6 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Engagement&display=swap");
-
 
 .navbar {
   font-size: 4px;
