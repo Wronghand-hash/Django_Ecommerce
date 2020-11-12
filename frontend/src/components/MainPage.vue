@@ -5,7 +5,7 @@
         Acapulco Design
       </h1>
       <h2 class="h2-home">
-        Limited custom handmade merchendise by 
+        Limited custom handmade merchendise by
       </h2>
     </div>
 
@@ -27,13 +27,12 @@ export default {};
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Sail&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Sahitya&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sahitya&display=swap");
 
 .home-background {
   filter: blur(1px);
   -webkit-filter: blur(1px);
 }
-
 
 .acapulco {
   font-family: sail;
@@ -52,13 +51,14 @@ export default {};
 .h2-home {
   font-size: 3.5rem;
   z-index: 1;
-  font-family: 'Sahitya', serif;
+  font-family: "Sahitya", serif;
   position: absolute;
-width: 764px;
-text-align: center;
-top: 60%;
+  width: 764px;
+  text-align: center;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-color: #FFFFFF;
+  color: #ffffff;
+  line-height: 110%;
 }
 </style>
