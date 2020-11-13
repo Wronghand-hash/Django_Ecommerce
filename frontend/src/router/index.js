@@ -12,14 +12,15 @@ const routes = [
     component: Home
   },
   {
-    path: "/productslist",
-    name: "productlist",
+    path: "/product/:id",
+    name: "product",
     component: productlist
   }
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: "history"
 });
 
 export default router;
