@@ -1,4 +1,4 @@
-<template>
+<template> 
   <div class="row mt-5" v-if="Product">
     <div class="col-4">
       <img :src="Product.image" class="w-100" />

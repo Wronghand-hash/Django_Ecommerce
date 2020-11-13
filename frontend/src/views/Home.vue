@@ -1,4 +1,4 @@
-<template>
+<template> 
   <div class="home" color="#DFDFDF">
     <div>
       <v-img

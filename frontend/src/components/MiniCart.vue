@@ -1,4 +1,4 @@
-<template>
+<template> 
     <v-container>
         <v-card>
             <v-card-title>Shopping Cart</v-card-title>

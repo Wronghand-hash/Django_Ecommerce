@@ -1,4 +1,4 @@
-<template>
+<template> 
   <v-container class="my-5">
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 lg3>
