@@ -35,7 +35,7 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-for="category in categories" :key="category.title">
+          <v-list-item v-for="category in APIData " :key="category.title">
             <v-list-item-title>{{ category.title }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import getAPI from "../axios"
 
 export default {
   data() {
@@ -105,7 +105,7 @@ export default {
     };
   },
   created() {
-    axios.get("http://127.0.0.1:8000/api/category/").then(response => {
+    getAPI.get("api/category/").then(response => {
       this.categories = response.data;
     });
   }
