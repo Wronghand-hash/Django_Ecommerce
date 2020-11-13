@@ -30,8 +30,8 @@ export default {};
 @import url("https://fonts.googleapis.com/css2?family=Sahitya&display=swap");
 
 .home-background {
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 .acapulco {
@@ -58,7 +58,7 @@ export default {};
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: #E7E7E7;
   line-height: 110%;
 }
 </style>
