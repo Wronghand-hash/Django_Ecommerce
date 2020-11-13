@@ -41,7 +41,7 @@
         </v-list>
       </v-menu>
       <v-btn dark large color="transparent">
-        <v-icon large right>mdi-login-variant</v-icon>
+        <v-icon large >mdi-login-variant</v-icon>
       </v-btn>
     </v-toolbar>
     <v-sheet
