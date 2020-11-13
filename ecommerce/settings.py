@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'webpack_loader',
     'rest_framework',
     'corsheaders',
-    'rest_framework_simplejwt.token_blacklist',
+    'rest_framework_simplejwt.token_blacklist'
 ]
 
 MIDDLEWARE = [
