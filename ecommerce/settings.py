@@ -152,7 +152,7 @@ MEDIA_URL = '/img/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')
 
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 REST_FRAMEWORK = {
