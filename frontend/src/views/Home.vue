@@ -1,42 +1,41 @@
-<template>
-  <div class="home pa-0" color="#DFDFDF">
-    <Navbar />
-    <MainPage />
-    <ProductList />
-    <Footer />
+<template> 
+  <div class="home" color="#DFDFDF">
+    <div>
+      <v-img
+        class="home-background"
+        max-height="900"
+        src="@/assets/images/tabitha-turner--_bSa4Sn1Bs-unsplash.jpg"
+      ></v-img>
+      <!-- <v-img class="van-pic" absolute right max-height=700 max-width=400 src="@/assets/images/tyler-nix-6mze64HRU2Q-unsplash.jpg" ></v-img> -->
+    </div>
+    <div class="right-pic"></div>
+    <div>
+      <MiniCart></MiniCart>
+      <ProductList></ProductList>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Navbar from "@/components/Navbar.vue";
-import MainPage from "@/components/MainPage.vue"
-import ProductList from "@/components/ProductList.vue";
+import ProductList from "../components/ProductList.vue";
 import Footer from "@/components/Footer.vue";
+import MiniCart from "../components/MiniCart.vue";
 
 export default {
   name: "Home",
   components: {
-    Navbar,
-    MainPage,
     ProductList,
-    Footer
+    Footer,
+    MiniCart
   }
 };
 </script>
 
 <style scoped>
-
-
-.p-home {
-  position: absolute;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  color: #ffffff;
-}
-
-.home-background {
-  height: 100%;
-}
+/* .home-background {
+    filter: blur(1px);
+  -webkit-filter: blur(1px);
+  } */
 </style>
