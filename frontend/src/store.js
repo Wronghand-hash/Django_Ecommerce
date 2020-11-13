@@ -2,26 +2,21 @@ import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
 
-const getAPI = axios.create({
-  baseURL: "http://127.0.0.1:8000",
-  timeout: 1000,
-});
-
 Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     accessToken: null,
     refreshToken: null,
-    products: [],
-    product: null,
-    cart: [], 
+    Products: [],
+    Product: null,
+    Cart: [], 
   },
   mutations: {
-    setProducts(state, products){
-      state.products = products;
+    setProducts(state, Products){
+      state.Products = Products;
     },
-    setProduct(state, product){
-      state.product = product;
+    setProduct(state, Product){
+      state.Product = Product;
     },
     updateStorage(state, { access, refresh }) {
       state.accessToken = access;
@@ -31,9 +26,9 @@ export default new Vuex.Store({
       state.accessToken = null
       state.refreshToken = null
     },
-    AddToCart(state, {product, quantity}){
-      state.cart.push({
-        product,
+    AddToCart(state, {Product, quantity}){
+      state.Cart.push({
+        Product,
         quantity
       })
     }
@@ -45,16 +40,16 @@ export default new Vuex.Store({
   // },
   actions: {
     getProducts({commit}){
-      getAPI.get("/api/store/")
+      axios.get("http://127.0.0.1:8000/api/store/")
       .then(response => {
         commit('setProducts', response.data)
       })
     },
-    addProductToCart({commit}, {product , quantity}){
-      commit('AddToCart', {product, quantity})
+    addProductToCart({commit}, {Product , quantity}){
+      commit('AddToCart', {Product, quantity})
     },
-    getProduct({commit}, productId){
-      getAPI.get(`/api/store/${productId}/`)
+    getProduct({commit}, ProductId){
+      axios.get(`http://127.0.0.1/api/store/${ProductId}/`)
       .then(response => {
         commit('setProduct', response.data)
       })

@@ -1,9 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import productlist from "../components/ProductList.vue"
-import Login from "../views/Login.vue"
-import Logout from "../views/Logout.vue"
+import Product from "../views/Product.vue"
 
 Vue.use(VueRouter);
 
@@ -14,24 +12,13 @@ const routes = [
     name: "Home",
     component: Home
   },
+  
   {
-    path: "/productslist",
-    name: "productlist",
-    component: productlist,
-    // meta: {
-    //   requiresLogin: true
-    // }
+    path: "/product/:id",
+    name: "product",
+    component: Product,
+    props: true
   },
-  {
-    path: "/login",
-    name: "login",
-    component: Login
-  },
-  {
-    path: "/logout",
-    name: "logout",
-    component: Logout
-  }
 ];
 
 const router = new VueRouter({

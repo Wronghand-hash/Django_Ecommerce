@@ -3,10 +3,11 @@
         <v-card>
             <v-card-title>Shopping Cart</v-card-title>
             <v-card-text>
-                <div v-for="item in cart" :key="item.product.title">
-                    <div>{{ item.product.title }}</div>
+                <div v-for="item in Cart" :key="item.Product.id">
+                    <div>{{ item.Product.title }}</div>
+                    <div>{{ item.Product.price }}</div>
                 </div>
-
+                   
             </v-card-text>
         </v-card>
     </v-container>
@@ -16,8 +17,8 @@
 
 export default {
     computed: {
-        cart(){
-            return this.$store.state.cart;
+        Cart(){
+            return this.$store.state.Cart;
         }
     }
 }

@@ -20,7 +20,7 @@ from rest_framework import generics
 
 
 #class based api using 
-class ProductList(generics.ListCreateAPIView):
+class ProductList(generics.RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -33,10 +33,6 @@ class ProductList(generics.ListCreateAPIView):
     def post(self, request, *args , **kwargs):
         return self.create(request, *args , **kwargs)
 
-class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
-
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
     
       
 class CategoryViewSet(generics.ListCreateAPIView):
