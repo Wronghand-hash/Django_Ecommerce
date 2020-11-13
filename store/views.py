@@ -7,7 +7,6 @@ from rest_framework.response import Response
 from django.http import HttpRequest
 from rest_framework import viewsets
 from .serializers import ProductSerializer, CategorySerializer
-from rest_framework.permissions import IsAuthenticated
 
 
 from rest_framework import mixins
@@ -20,7 +19,7 @@ from rest_framework import generics
 
 
 #class based api using 
-class ProductList(generics.RetrieveAPIView):
+class ProductList(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -33,7 +32,9 @@ class ProductList(generics.RetrieveAPIView):
     def post(self, request, *args , **kwargs):
         return self.create(request, *args , **kwargs)
 
-    
+class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
       
 class CategoryViewSet(generics.ListCreateAPIView):
     queryset = Category.objects.all()

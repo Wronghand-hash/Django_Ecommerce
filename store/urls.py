@@ -1,9 +1,5 @@
 from django.urls import path, include
 from . import views
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
 
 
 urlpatterns = [
@@ -15,8 +11,6 @@ urlpatterns = [
     # path('<slug:slug>', views.category_detail, name="category_detail"),
 
     path('store/', views.ProductList.as_view(), name="ProductViewSet"),
-    path('store/<int:pk>/', views.ProductList.as_view(), name="product_detail"),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('detail/<int:pk>/', views.ProductDetail.as_view(), name="product_detail"),
     
 ]

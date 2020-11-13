@@ -1,34 +1,26 @@
 <template>
-  <div class="home" color="#DFDFDF">
-    <div>
-      <v-img
-        class="home-background"
-        max-height="900"
-        src="@/assets/images/tabitha-turner--_bSa4Sn1Bs-unsplash.jpg"
-      ></v-img>
-      <!-- <v-img class="van-pic" absolute right max-height=700 max-width=400 src="@/assets/images/tyler-nix-6mze64HRU2Q-unsplash.jpg" ></v-img> -->
-    </div>
-    <div class="right-pic"></div>
-    <div>
-      <MiniCart></MiniCart>
-      <ProductList></ProductList>
-    </div>
-    <Footer></Footer>
+  <div class="home pa-0" color="#DFDFDF">
+    <Navbar />
+    <MainPage />
+    <ProductList />
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ProductList from "../components/ProductList.vue";
+import Navbar from "@/components/Navbar.vue";
+import MainPage from "@/components/MainPage.vue"
+import ProductList from "@/components/ProductList.vue";
 import Footer from "@/components/Footer.vue";
-import MiniCart from "../components/MiniCart.vue";
 
 export default {
   name: "Home",
   components: {
+    Navbar,
+    MainPage,
     ProductList,
-    Footer,
-    MiniCart
+    Footer
   }
 };
 </script>
