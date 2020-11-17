@@ -41,7 +41,7 @@
         </v-list>
       </v-menu>
       <v-btn dark large color="transparent">
-        <v-icon large >mdi-login-variant</v-icon>
+        <v-icon large>mdi-login-variant</v-icon>
       </v-btn>
     </v-toolbar>
     <v-sheet
@@ -100,15 +100,15 @@ export default {
       links: [
         { text: "Dashboard", route: "/" },
         { text: "My Projects", route: "/projects" },
-        { text: "Team", route: "/team" }
-      ]
+        { text: "Team", route: "/team" },
+      ],
     };
   },
   created() {
-    axios.get("http://127.0.0.1:8000/api/category/").then(response => {
+    axios.get("http://127.0.0.1:8000/api/category/").then((response) => {
       this.categories = response.data;
     });
-  }
+  },
 };
 </script>
 
