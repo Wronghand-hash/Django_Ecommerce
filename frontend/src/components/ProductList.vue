@@ -43,7 +43,7 @@
         <v-scale-transition>
           <v-icon
             v-if="active"
-            color="dark"
+            color="black"
             size="48"
             v-text="'mdi-close-circle-outline'"
           ></v-icon>
