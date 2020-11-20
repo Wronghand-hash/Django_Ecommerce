@@ -95,7 +95,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      categoris: [],
+      categories: [],
       drawer: false,
       links: [
         { text: "Dashboard", route: "/" },
