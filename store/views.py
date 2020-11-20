@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import HttpRequest
 from rest_framework import viewsets
-from .serializers import ProductSerializer, CategorySerializer
+from .serializers import *
 
 
 from rest_framework import mixins
@@ -39,6 +39,20 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
 class CategoryViewSet(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+class CartItem(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = CartSerializer
+
+    def get(self , request , *args , **kwargs):
+        queryset = self.get_queryset()
+        serializer = ProductSerializer(queryset , many=True)
+        return Response(serializer.data)
+
+
+    def post(self, request, *args , **kwargs):
+        return self.create(request, *args , **kwargs)
 
 # def frontpage(request):
 #     products = Product.objects.all()

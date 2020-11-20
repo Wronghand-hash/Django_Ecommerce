@@ -27,6 +27,16 @@ export default new Vuex.Store({
       state.refreshToken = null
     },
     AddToCart(state, {Product, quantity}){
+
+      let productInCart = state.Cart.find(item =>{
+        return item.Product.id == Product.id
+      })
+
+      if(productInCart){
+        productInCart.quantity += quantity
+        return;
+      }
+
       state.Cart.push({
         Product,
         quantity
@@ -76,4 +86,17 @@ export default new Vuex.Store({
     //   });
     // },
   },
-});
+  getters:{
+    cartItemCount(state){
+      return state.Cart.length
+    },
+    cartTotal(state){
+      let total = 0;
+
+      state.Cart.forEach(item => {
+        total += item.Product.price * item.quantity
+      });
+      return total
+    }
+  }
+})

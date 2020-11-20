@@ -12,5 +12,6 @@ urlpatterns = [
 
     path('store/', views.ProductList.as_view(), name="ProductViewSet"),
     path('detail/<int:pk>/', views.ProductDetail.as_view(), name="product_detail"),
+    path('cart/', views.CartItem.as_view(), name="Cart")
     
 ]
