@@ -29,6 +29,8 @@
   <v-sheet>
     <v-slide-group v-model="model" center-active show-arrows>
       <ProductCard
+        enter-active-class="animate__animated animate__fadeInDown"
+        leave-active-class="animate__animated animate__fadeOutUp"
         class="ma-5"
         v-for="Product in Products"
         :key="Product.id"
