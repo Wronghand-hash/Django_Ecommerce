@@ -1,7 +1,7 @@
 <template>
   <v-content class="pa-0 ma-0">
     <div>
-      <h1 class="acapulco animate__animated animate__rubberBand animate__delay-1s">
+      <h1 class="acapulco animate__animated animate__zoomInDown animate__delay-1s">
         Acapulco Design
       </h1>
       <h2 class="h2-home animate__animated animate__bounceInUp animate__delay-1s">Limited custom handmade merchendise by</h2>
@@ -41,11 +41,11 @@ export default {};
   font-family: sail;
   z-index: 1;
   font-size: 150px;
-  backdrop-filter: blur(4px);
-  color: #ffffff;
+  /* backdrop-filter: blur(4px); */
+  color: #e7e7de;
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 48%;
   transform: translate(-50%, -50%);
   text-align: center;
   line-height: 90%;
@@ -61,7 +61,7 @@ export default {};
   top: 50%;
   left: 23%;
   transform: translate(-50%, -50%);
-  color: #e7e7e7;
+  color: #e7e7de;
   line-height: 110%;
 }
 </style>

@@ -2,7 +2,10 @@
   <v-content>
     <Navbar />
     <MainPage />
-    <ProductList />
+    <div id="scroll">
+      <v-btn class="animate__animated animate__jello animate__infinite" v-scroll-to="'#productlist'">View Products</v-btn>
+    </div>
+    <ProductList id="productlist" />
     <MiniCart />
     <Footer />
   </v-content>
@@ -33,4 +36,10 @@ export default {
     filter: blur(1px);
   -webkit-filter: blur(1px);
   } */
+  #scroll{
+    position: relative;
+    left: 43%;
+    bottom: 10%;
+    z-index: 1;
+  }
 </style>
