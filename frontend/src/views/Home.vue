@@ -4,7 +4,7 @@
     <v-spacer></v-spacer>
     <v-content>
       <v-container>
-      <component class="animate__animated"  :is="component"></component>
+      <component :class="{ 'animate__zoomIn' : ShowProducts}" class="animate__animated"  :is="component"></component>
       <div v-show="ShowProducts == false" id="switch">
         <v-btn
           class="animate__animated animate__jello animate__infinite"
@@ -70,15 +70,6 @@ export default {
 #footer {
   position: relative;
   bottom: 0;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 
 </style>
