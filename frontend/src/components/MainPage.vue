@@ -1,17 +1,20 @@
 <template>
   <v-content class="pa-0 ma-0">
     <div>
-      <h1 class="acapulco animate__animated animate__tada animate__delay-0.5s">
-        Acapulco Design
-      </h1>
-      <h2 class="h2-home animate__animated animate__bounceInUp animate__delay-1s">Limited custom handmade merchendise by</h2>
+      <v-container id="main">
+        <h1
+          class="acapulco animate__animated animate__jackInTheBox animate__delay-0.5s"
+        >
+          Acapulco Design
+        </h1>
+        <h2
+          class="h2-home animate__animated animate__flipInY animate__delay-1s"
+        >
+          Limited custom handmade merchendise by
+        </h2>
+      </v-container>
     </div>
 
-    <v-img
-      class="home-background"
-      max-height="900"
-      src="@/assets/images/tabitha-turner--_bSa4Sn1Bs-unsplash.jpg"
-    ></v-img>
     <!-- <div class="">
       <h1 class="acapulco text-center"></h1>
     </div> -->
@@ -44,7 +47,7 @@ export default {};
   /* backdrop-filter: blur(4px); */
   color: #e7e7de;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 10%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -58,10 +61,13 @@ export default {};
   position: absolute;
   width: 764px;
   text-align: center;
-  top: 50%;
+  top: 70%;
   left: 23%;
   transform: translate(-50%, -50%);
   color: #e7e7de;
   line-height: 110%;
+}
+#main {
+  padding: 20%;
 }
 </style>

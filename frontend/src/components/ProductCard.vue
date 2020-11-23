@@ -25,7 +25,7 @@
         
       </div>
     </v-card> -->
-  <v-card color="#03045e" class="mx-5" max-width="500">
+  <v-card color="#055049" class="mx-5" max-width="500">
     <v-img :src="Product.image" height="300px" width="400px"></v-img>
 
     <v-card-title>
@@ -39,14 +39,14 @@
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn color="#fcf876" text> Detail </v-btn>
+      <v-btn color="#faf35e" text> Detail </v-btn>
 
       <v-spacer></v-spacer>
 
-      <v-btn color="#fcf876" icon @click="show = !show">
+      <v-btn color="#faf35e" icon @click="show = !show">
         <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
       </v-btn>
-      <v-btn color="#fcf876" @click="addToCart()">Add to Cart</v-btn>
+      <v-btn color="#faf35e" @click="addToCart()">Add to Cart</v-btn>
     </v-card-actions>
 
     <v-expand-transition>
