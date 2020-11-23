@@ -100,7 +100,8 @@ v-container {
   position: absolute;
   top: 40%;
   margin-top: 10%;
-  margin-left: 20px;
+  margin-left: 15px;
+  width: 180%;
 }
 #slideGroup{
   color: transparent;

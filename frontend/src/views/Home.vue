@@ -3,13 +3,12 @@
     <Navbar id="navbar" />
     <v-spacer></v-spacer>
     <v-content>
-      
       <v-container>
-      <component  :is="component"></component>
-      <div id="scroll">
+      <component class="animate__animated"  :is="component"></component>
+      <div v-show="ShowProducts == false" id="switch">
         <v-btn
           class="animate__animated animate__jello animate__infinite"
-          @click="component = 'ProductList'"
+          @click="component = 'ProductList' , ShowProducts = true"
           >View Products</v-btn
         >
       </div>
@@ -40,6 +39,7 @@ export default {
   data() {
     return {
       component: "MainPage",
+      ShowProducts: false
     };
   },
 };
@@ -50,10 +50,10 @@ export default {
     filter: blur(1px);
   -webkit-filter: blur(1px);
   } */
-#scroll {
-  position: relative;
+#switch {
+  position: absolute;
   left: 43%;
-  bottom: 10%;
+  bottom: -40%;
   z-index: 1;
 }
 #main {
@@ -64,12 +64,21 @@ export default {
   background-size: cover;
 }
 #dynamic {
- position: relative;
- top: 50%;
-
+  position: relative;
+  top: 50%;
 }
-#footer{
+#footer {
   position: relative;
   bottom: 0;
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 </style>
