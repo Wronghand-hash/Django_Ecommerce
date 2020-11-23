@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'webpack_loader',
     'rest_framework',
     'corsheaders',
-    'rest_framework_simplejwt.token_blacklist'
 ]
 
 MIDDLEWARE = [
@@ -158,6 +157,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 REST_FRAMEWORK = {
    
     'DEFAULT_AUTHENTICATION_CLASSES': (  
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }

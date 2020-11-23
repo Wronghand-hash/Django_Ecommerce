@@ -1,7 +1,7 @@
 <template>
   <v-content class="pa-0 ma-0">
     <div>
-      <h1 class="acapulco animate__animated animate__zoomInDown animate__delay-1s">
+      <h1 class="acapulco animate__animated animate__tada animate__delay-0.5s">
         Acapulco Design
       </h1>
       <h2 class="h2-home animate__animated animate__bounceInUp animate__delay-1s">Limited custom handmade merchendise by</h2>
@@ -45,7 +45,7 @@ export default {};
   color: #e7e7de;
   position: absolute;
   top: 30%;
-  left: 48%;
+  left: 10%;
   transform: translate(-50%, -50%);
   text-align: center;
   line-height: 90%;

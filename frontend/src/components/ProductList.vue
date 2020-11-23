@@ -25,8 +25,8 @@
       </v-col>
     </v-row>
   </v-container> -->
-
   <v-sheet>
+    
     <v-slide-group v-model="model" center-active show-arrows>
       <ProductCard
         class="ma-5"
@@ -89,5 +89,8 @@ export default {
 v-container {
   position: relative;
   right: 10%;
+}
+template{
+  background: url('../assets/images/jean-estrella-_XOpGfUkjhs-unsplash.jpg');
 }
 </style>
